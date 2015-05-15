@@ -1,0 +1,10 @@
+default: &default
+  twitter_id:
+  twitter_key:
+  facebook_id:
+  facebook_key:
+  vk_id:
+  vk_key:
+
+production:
+  <<: *default
