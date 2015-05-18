@@ -1,0 +1,18 @@
+data:
+  image: phusion/baseimage
+  command: true
+
+mysql:
+ image: mysql
+ environment:
+   MYSQL_DATABASE: gtumblr_production
+   MYSQL_ROOT_PASSWORD: pass
+
+webapp:
+  build: .
+  ports:
+    - "80:80"
+  volumes_from:
+    - data
+  links:
+    - mysql

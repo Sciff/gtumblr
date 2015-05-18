@@ -39,6 +39,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
 gem 'carrierwave'
+gem 'dotenv-rails'
 
 gem 'faker'
 
