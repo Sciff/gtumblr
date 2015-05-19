@@ -4,9 +4,9 @@ data:
 
 mysql:
  image: mysql
+ env_file: .env
  environment:
    MYSQL_DATABASE: gtumblr_production
-   MYSQL_ROOT_PASSWORD: pass
 
 webapp:
   build: .
