@@ -1,0 +1,10 @@
+.row
+  .col-md-12
+    h3
+      = @location.title
+    address
+      'Address:
+      = @location.address
+
+    = link_to 'Edit', edit_location_path(@location), class: 'btn btn-primary'
+

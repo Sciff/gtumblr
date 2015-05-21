@@ -1,7 +1,9 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
+    "underscore": "latest",
     "bootstrap-sass-official": "latest",
-    "font-awesome": "latest"
+    "font-awesome": "latest",
+    "geocomplete": "latest"
   }
 }

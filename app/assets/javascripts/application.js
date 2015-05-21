@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore/underscore
 //= require bootstrap-sass-official/assets/javascripts/bootstrap
-//= require bootstrap-sass-official/assets/javascripts/bootstrap-sprockets
+//= require geocomplete/jquery.geocomplete
+
 //= require_tree .

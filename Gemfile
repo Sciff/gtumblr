@@ -44,6 +44,8 @@ gem 'dotenv-rails'
 gem 'faker'
 
 group :development, :test do
+  gem 'thin'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

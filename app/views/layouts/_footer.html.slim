@@ -1,0 +1,15 @@
+#modal-lg.modal.fade role="dialog" aria-hidden="true"
+  .modal-dialog.modal-lg
+    .modal-content
+
+#modal-sm.modal.fade role="dialog" aria-hidden="true"
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        button type="button" class="close" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+        h4.modal-title Menu
+      .modal-body
+        = link_to 'Show', '#', id: 'show-note', class: 'btn btn-default btn-block'
+        = link_to 'Edit', '#', id: 'edit-note', class: 'btn btn-primary btn-block'
+        = link_to 'Destroy', '#', id: 'destroy-note', class: 'btn btn-danger btn-block',  data: { confirm: 'Are you sure?'}, method: :delete

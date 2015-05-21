@@ -1,0 +1,31 @@
+#locations
+  h1 Listing locations
+  = link_to 'New Location', new_location_path, class: 'btn btn-primary'
+  ul.list-unstyled
+    .items-header
+      li.item
+        .row
+          .col-md-3.col-xs-6.col-sm-4
+            'Title
+          .col-md-3.col-sm-4.hidden-xs
+            'Address
+          .col-md-3.hidden-sm.hidden-xs
+            ' Latitude Longitude
+          .col-md-3.col-sm-4.col-xs-6.text-right
+            'Actions
+    - @locations.each do |location|
+      li.item
+        .row
+          .col-md-3.col-xs-6.col-sm-4
+            = truncate(location.title)
+          .col-md-3.col-sm-4.hidden-xs
+            = truncate(location.address)
+          .col-md-3.hidden-sm.hidden-xs
+            '#{location.latitude} #{ location.longitude}
+          .col-md-3.col-sm-4.col-xs-6.text-right
+            =' link_to location, class: 'btn btn-default btn-sm' do
+              i.fa.fa-bookmark
+            =' link_to edit_location_path(location), class: 'btn btn-primary btn-sm' do
+              i.fa.fa-edit
+            =' link_to location, class: 'btn btn-danger btn-sm', data: {confirm: 'Are you sure?'}, method: :delete do
+              i.fa.fa-remove
