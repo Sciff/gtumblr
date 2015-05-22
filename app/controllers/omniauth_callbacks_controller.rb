@@ -15,5 +15,4 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   alias_method :facebook, :all
   alias_method :vkontakte, :all
 
-
 end
