@@ -8,12 +8,16 @@ class User < ActiveRecord::Base
 
   attr_accessor :current_password
 
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, presence: true, if: :name_required?
 
   mount_uploader :avatar, AvatarUploader
 
   def password_required?
-    super && provider.blank?
+    super && (provider.blank? or persisted?)
+  end
+
+  def name_required?
+    provider.blank? or persisted?
   end
 
   def update_with_password(params, *options)

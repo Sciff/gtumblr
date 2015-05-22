@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
   devise_scope :user do
     get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_up', to: 'devise/registrations#new'
   end
 
   resource :profile, only: [:show]

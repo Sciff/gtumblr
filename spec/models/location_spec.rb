@@ -22,7 +22,7 @@ RSpec.describe Location, type: :model do
     is_expected.not_to be_valid
   end
 
-  it 'should be invalid without user' do
+  it 'should be invalid without users' do
     location.user = nil
     is_expected.not_to be_valid
   end
